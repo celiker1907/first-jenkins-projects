@@ -4,6 +4,7 @@ test("Getting the title of the page", async ({ page }) => {
   // goto https://practice.cydeo.com/
   await page.goto("https://practice.cydeo.com/");
 
+  
   let actualTitle = await page.title();
 
   console.log(actualTitle);
