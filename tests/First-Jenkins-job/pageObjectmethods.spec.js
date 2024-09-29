@@ -10,6 +10,8 @@ test("Getting the title of the page", async ({ page }) => {
   console.log(actualTitle);
 
 
+  
+
 });
 
 test("Getting the current URL of the page", async ({ page }) => {
