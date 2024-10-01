@@ -2,12 +2,9 @@ import { test } from '@playwright/test';
 
 test.describe('Test Group', () => {
 
-
-  
     test.beforeEach(async ({ page }) => { 
         await page.goto("https://practice.cydeo.com/");
    });
-
 
    
   test('Check() checks the radio buttons and checkboxes if they havnt been checked yet', async ({ page }) => {
@@ -53,7 +50,7 @@ test.describe('Test Group', () => {
     
   });
 
-  
+
   test('innerText() retrives the visible text', async ({ page }) => {
 
     let headerElement = page.locator("//span[@class='h1y']");
@@ -64,7 +61,6 @@ test.describe('Test Group', () => {
    
  });
 
- 
   test('inputValue(): only works with <input>, <textarea>, <select>', async ({ page }) => {
 
        let inputsLink = page.getByText("Inputs");
@@ -76,12 +72,7 @@ test.describe('Test Group', () => {
 
        let inputBox = page.locator("//input[@type='number']");
 
-      
-
-
        await inputBox.fill("123");
-
-       
 
        let inputValue = await inputBox.inputValue();
 

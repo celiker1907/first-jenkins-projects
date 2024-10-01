@@ -12,6 +12,7 @@ module.exports = defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
+  /* Opt out of parallel tests on CI. */
   workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
@@ -29,12 +30,13 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], 
-        viewport: { width: 1850, height: 1000 }
-        
+      use: { 
+        ...devices['Desktop Chrome'],
+        viewport: {width: 1850, height: 1000} // sets the size of the window
        },
     },
-/*
+
+    /*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
@@ -67,4 +69,3 @@ module.exports = defineConfig({
   ],
 
 });
-
